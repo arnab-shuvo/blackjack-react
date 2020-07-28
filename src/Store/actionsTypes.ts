@@ -1,0 +1,10 @@
+export const STORE_DECK = 'STORE_DECK';
+export const UPDATE_REMAINING_DECK = 'UPDATE_REMAINING_DECK';
+export const STORE_PLAYER = 'STORE_PLAYER';
+export const HIT_PLAYER = 'HIT_PLAYER';
+export const STORE_DEALER = 'STORE_DEALER';
+export const STICK_DEALER = 'STICK_DEALER';
+export const RESET = 'RESET';
+export const WINNER = 'WINNER';
+export const PLAYER_SCORE = 'PLAYER_SCORE';
+export const DEALER_SCORE = 'DEALER_SCORE';
