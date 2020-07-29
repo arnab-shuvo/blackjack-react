@@ -23,6 +23,8 @@ interface IUtilityReducer {
 	winner: IWinner;
 	playerScore: number;
 	dealerScore: number;
+	blackJack: boolean;
+	blackJackStick: boolean;
 }
 
 interface IWinner {

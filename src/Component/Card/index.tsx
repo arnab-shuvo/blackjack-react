@@ -11,7 +11,6 @@ const Cards: React.FC<ICard> = ({ value, marker, back }) => {
 	} else {
 		cardMarker.push(<span key={value}>{marker}</span>);
 	}
-	console.log(back, 'back');
 
 	return (
 		<CardContainer>

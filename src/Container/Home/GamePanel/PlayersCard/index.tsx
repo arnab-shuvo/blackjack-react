@@ -4,17 +4,20 @@ import Cards from '../../../../Component/Card';
 import { useSelector, useDispatch } from 'react-redux';
 import { GameSideWrapper } from './styled';
 import ScoreCalculator from '../../../../utils/scoreCalculator';
-import { storePlayerScore } from '../../../../Store/Actions/UtilityActions';
+import { storePlayerScore, blackJack } from '../../../../Store/Actions/UtilityActions';
+import { BREAKPOINT } from '../../../../Constants';
 
 const PlayersCard: React.FC = () => {
 	const [score, setScore] = useState<number>(0);
-	const playerStore = useSelector((state: IStoreState) => state.playerStore);
-	const playerCards = playerStore.cards;
+	const playerCards = useSelector((state: IStoreState) => state.playerStore.cards);
 	const dispatch = useDispatch();
 
 	useEffect(() => {
 		const newScore = ScoreCalculator(playerCards);
 		dispatch(storePlayerScore(newScore));
+		if (playerCards.length === 2 && newScore === BREAKPOINT) {
+			dispatch(blackJack());
+		}
 		setScore(newScore);
 	}, [playerCards, dispatch]);
 

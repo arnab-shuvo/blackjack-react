@@ -5,11 +5,10 @@ import { hitUpdate } from '../../../../Store/Actions/DeckAction';
 import CardDrawer from '../../../../utils/randomCard';
 import { hitPlayerCards } from '../../../../Store/Actions/PlayerActions';
 import scoreCalculator from '../../../../utils/scoreCalculator';
-import winnerSelector from '../../../../utils/winnerSelector';
-import { BREAKPOINT } from '../../../../Constants';
+import { BREAKPOINT, WINNING_MESSAGE } from '../../../../Constants';
 import { winner } from '../../../../Store/Actions/UtilityActions';
 
-const Hit: React.FC = () => {
+const Hit: React.FC<IControl> = ({ disabled }) => {
 	const cardStore = useSelector((state: IStoreState) => state.cardStore);
 	const playerCards = useSelector((state: IStoreState) => state.playerStore.cards);
 	const dispatch = useDispatch();
@@ -28,14 +27,14 @@ const Hit: React.FC = () => {
 		if (playerScoreFinal > BREAKPOINT) {
 			const winnerData = {
 				selected: true,
-				message: winnerSelector(playerScoreFinal),
+				message: WINNING_MESSAGE.PLAYER_EXCEED,
 			};
 			dispatch(winner(winnerData));
 		}
 	};
 	return (
 		<div className={'text-center'}>
-			<Button variant={'secondary'} fontSize={30} onClick={hit}>
+			<Button disabled={disabled} variant={'secondary'} fontSize={30} onClick={hit}>
 				Hit
 			</Button>
 		</div>

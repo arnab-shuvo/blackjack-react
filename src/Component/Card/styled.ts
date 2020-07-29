@@ -26,6 +26,7 @@ export const CardBlock = styled.div`
 	border-radius: 14px;
 	padding: 40px;
 	color: #ec1d22;
+	font-family: 'Great Vibes', cursive;
 	&.black-cards {
 		color: #000;
 	}

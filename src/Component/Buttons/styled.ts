@@ -17,4 +17,10 @@ export const StyledButton = styled.button<IButton>`
 	&:hover {
 		background: transparent;
 	}
+	&.disabled {
+		cursor: not-allowed !important;
+		background: #cdcdcd;
+		color: #333;
+		border-color: #cdcdcd;
+	}
 `;

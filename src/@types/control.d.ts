@@ -1,0 +1,3 @@
+interface IControl {
+	disabled?: boolean;
+}

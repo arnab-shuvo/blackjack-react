@@ -8,6 +8,8 @@ export default (playerScore: number, dealerScore?: number) => {
 		} else {
 			if (dealerScore > playerScore) {
 				winnerMessage = WINNING_MESSAGE.DEALER_WIN;
+			} else if (dealerScore === playerScore) {
+				winnerMessage = WINNING_MESSAGE.PUSH;
 			} else {
 				winnerMessage = WINNING_MESSAGE.PLAYER_WIN;
 			}

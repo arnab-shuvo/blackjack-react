@@ -8,3 +8,6 @@ export const RESET = 'RESET';
 export const WINNER = 'WINNER';
 export const PLAYER_SCORE = 'PLAYER_SCORE';
 export const DEALER_SCORE = 'DEALER_SCORE';
+export const BLACK_JACK = 'BLACK_JACK';
+export const STICK_BLACK_JACK = 'BLACSTICK_BLACK_JACKK_JACK';
+export const RESET_UTILITY = 'RESET_UTILITY';

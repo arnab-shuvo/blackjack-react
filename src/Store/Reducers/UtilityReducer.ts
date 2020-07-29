@@ -1,4 +1,4 @@
-import { RESET, WINNER, PLAYER_SCORE, DEALER_SCORE } from '../actionsTypes';
+import { RESET, WINNER, PLAYER_SCORE, DEALER_SCORE, BLACK_JACK, STICK_BLACK_JACK, RESET_UTILITY } from '../actionsTypes';
 
 const INITIAL_STATE: IUtilityReducer = {
 	reset: false,
@@ -8,6 +8,8 @@ const INITIAL_STATE: IUtilityReducer = {
 	},
 	playerScore: 0,
 	dealerScore: 0,
+	blackJack: false,
+	blackJackStick: false,
 };
 
 const UtilityReducer = (state = INITIAL_STATE, action: any) => {
@@ -20,6 +22,12 @@ const UtilityReducer = (state = INITIAL_STATE, action: any) => {
 			return { ...state, reset: action.payload };
 		case WINNER:
 			return { ...state, winner: action.payload };
+		case BLACK_JACK:
+			return { ...state, blackJack: action.payload };
+		case STICK_BLACK_JACK:
+			return { ...state, blackJackStick: action.payload };
+		case RESET_UTILITY:
+			return { ...state, ...action.payload };
 		default:
 			return state;
 	}

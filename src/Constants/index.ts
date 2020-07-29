@@ -7,6 +7,8 @@ export const POINT_FOR_CHARACTER_CARD = 10;
 export const WINNING_MESSAGE = {
 	PLAYER_WIN: '!! You have Won !!',
 	DEALER_WIN: '!! You have lost !!',
-	PLAYER_EXCEED: '!! You have lost due to over hit !!',
-	DEALER_EXCEED: '!! You have won as delaer have done over hit !!',
+	PLAYER_EXCEED: 'You Cracked! Dealer Won! ',
+	DEALER_EXCEED: 'Dealer Got Busted! You Won!',
+	BLACK_JACK: '!! BlackJack, Stick Now  !!',
+	PUSH: '!! Push !!',
 };
