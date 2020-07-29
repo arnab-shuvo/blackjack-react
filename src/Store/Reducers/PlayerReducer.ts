@@ -9,7 +9,7 @@ const CardReducer = (state = INITIAL_STATE, action: any) => {
 		case STORE_PLAYER:
 			return { ...state, ...action.payload };
 		case HIT_PLAYER:
-			return { ...state, cards: [...state.cards, action.payload] };
+			return { ...state, cards: action.payload };
 		default:
 			return state;
 	}

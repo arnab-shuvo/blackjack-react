@@ -6,7 +6,7 @@ export const storePlayerCards = (cards: ICardDeck) => {
 		payload: { cards },
 	};
 };
-export const hitPlayerCards = (cards: ICard) => {
+export const hitPlayerCards = (cards: ICardDeck) => {
 	return {
 		type: HIT_PLAYER,
 		payload: cards,

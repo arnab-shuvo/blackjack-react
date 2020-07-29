@@ -25,7 +25,7 @@ const PlayersCard: React.FC = () => {
 			<Grid container justify={'center'} alignItems={'center'}>
 				{playerCards.map((card: cards, index: number) => {
 					return (
-						<Grid key={index} item md={6}>
+						<Grid key={index} item md={1}>
 							<Cards value={card.value} marker={card.marker} />
 						</Grid>
 					);

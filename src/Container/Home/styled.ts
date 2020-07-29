@@ -8,6 +8,5 @@ export const HomeContainer = styled.div`
 	background-size: cover;
 	bacground-position: bottom right;
 	padding: 20px 0;
-	overflow-x: hidden;
-	overflow-y: scroll;
+	overflow: hidden;
 `;

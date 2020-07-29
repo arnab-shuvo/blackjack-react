@@ -24,14 +24,14 @@ const DealersCard: React.FC = () => {
 			<Grid container justify={'center'} alignItems={'center'}>
 				{dealerStore.cards.map((card: cards, index: number) => {
 					return (
-						<Grid key={index} item md={6}>
+						<Grid key={index} item md={1}>
 							<Cards value={card.value} marker={card.marker} />
 						</Grid>
 					);
 				})}
 				{dealerStore.cards.length === 1 && (
-					<Grid item md={6}>
-						<Cards value={''} marker={''} />
+					<Grid item md={1}>
+						<Cards value={''} marker={''} back />
 					</Grid>
 				)}
 			</Grid>

@@ -33,7 +33,7 @@ const Hit: React.FC = () => {
 
 	return (
 		<div className={'text-center'}>
-			<Button variant={'legendary'} fontSize={25} onClick={stick}>
+			<Button variant={'legendary'} fontSize={30} onClick={stick}>
 				Stick
 			</Button>
 		</div>

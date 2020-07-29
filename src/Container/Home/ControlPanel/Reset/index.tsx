@@ -10,7 +10,7 @@ const Reset: React.FC = () => {
 	};
 	return (
 		<div className={'text-center'}>
-			<Button variant={'primary'} fontSize={25} onClick={resetGame}>
+			<Button variant={'primary'} fontSize={30} onClick={resetGame}>
 				Reset
 			</Button>
 		</div>

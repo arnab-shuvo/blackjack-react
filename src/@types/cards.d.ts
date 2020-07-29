@@ -1,6 +1,7 @@
 interface ICard {
 	value: string | number;
 	marker: string;
+	back?: true;
 }
 type ICardDeck = ICard[];
 

@@ -1,6 +1,6 @@
 import { getRandomInt } from './randomCard';
 import { ScoreDeterminer } from './scoreCalculator';
-import { breakPoint } from '../Constants';
+import { BREAKPOINT } from '../Constants';
 
 export default (dealerScore: number, playerScore: number, deck: ICardDeck) => {
 	let drawnCards: IDrawnCardFromFunction = {
@@ -9,7 +9,7 @@ export default (dealerScore: number, playerScore: number, deck: ICardDeck) => {
 	};
 	let score = dealerScore;
 	for (let i = 0; i < deck.length; i++) {
-		if (score <= breakPoint && score <= playerScore) {
+		if (score <= BREAKPOINT && score <= playerScore) {
 			const indexOfCard = getRandomInt(deck.length - 1);
 			const drawnCard = deck.splice(indexOfCard, 1);
 			let cardScore = ScoreDeterminer(drawnCard[0].value, score);

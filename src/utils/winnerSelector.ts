@@ -1,9 +1,9 @@
-import { breakPoint, WINNING_MESSAGE } from '../Constants';
+import { BREAKPOINT, WINNING_MESSAGE } from '../Constants';
 
 export default (playerScore: number, dealerScore?: number) => {
 	let winnerMessage = '';
 	if (dealerScore) {
-		if (dealerScore > breakPoint) {
+		if (dealerScore > BREAKPOINT) {
 			winnerMessage = WINNING_MESSAGE.DEALER_EXCEED;
 		} else {
 			if (dealerScore > playerScore) {
@@ -13,7 +13,7 @@ export default (playerScore: number, dealerScore?: number) => {
 			}
 		}
 	} else {
-		if (playerScore > breakPoint) {
+		if (playerScore > BREAKPOINT) {
 			winnerMessage = WINNING_MESSAGE.PLAYER_EXCEED;
 		}
 	}
