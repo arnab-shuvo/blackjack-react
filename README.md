@@ -5,15 +5,21 @@
 BlackJackCrack is a online version of BlackJack Card Game. Current application is following the rules described bellow:
 
 > Numbered cards are worth their face value - 4 of clubs is worth 4, 10 of spades is worth 10, and so on
+
 > formatting syntax is to make it as readable
+
 > The ace can be either 1 or 11
+
 > Picture cards are worth 10 points.
 
 # Terms:
 
 > PUSH: Both the dealer's and player's points are same
+
 > BlackJack: Player got 21 in his first two cards
+
 > HIT: Player draw cards
+
 > STICK: Dealer drar cards
 
 # Regulations:
