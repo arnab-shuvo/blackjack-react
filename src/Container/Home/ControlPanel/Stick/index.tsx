@@ -44,8 +44,6 @@ const Hit: React.FC<IControl> = ({ disabled }) => {
 	};
 
 	const stick = () => {
-		console.log(playerCards.length, 'playerCards.length');
-
 		if (blackJack && playerCards.length < 3) {
 			blackJackCallBack();
 		} else {
