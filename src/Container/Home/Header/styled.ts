@@ -5,4 +5,7 @@ export const Logo = styled.p`
 	text-align: center;
 	text-shadow: 4px 2px 6px #ecde00;
 	font-family: 'Great Vibes', cursive;
+	@media screen and (max-width: 767px) {
+		font-size: 70px;
+	}
 `;

@@ -37,7 +37,7 @@ const DealersCard: React.FC = () => {
 			<p className='panel-score'>
 				Dealer's Score : <span>{score}</span>
 			</p>
-			<Grid container justify={'center'} alignItems={'center'}>
+			<Grid container justify={window.innerWidth < 768 ? 'flex-start' : 'center'} alignItems={'center'}>
 				{dealerStore.cards.map((card: cards, index: number) => {
 					return (
 						<React.Fragment key={index}>

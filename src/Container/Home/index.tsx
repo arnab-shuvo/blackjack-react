@@ -9,7 +9,7 @@ const Home: React.FC = () => {
 	return (
 		<HomeContainer>
 			<Grid container justify={'center'} direction={'row'}>
-				<Grid container item md={10}>
+				<Grid item md={10} xs={12}>
 					<Grid item md={12}>
 						<Header />
 					</Grid>

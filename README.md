@@ -34,7 +34,7 @@ BlackJackCrack is a online version of BlackJack Card Game. Current application i
     -   If the player's total card's value is 21, Its a "BLACKJACK" and player will "STICK".
     -   If the player's total card's value exceeds 21, Player loose.
     -   If total value is less then 21 and player is happy, the there will be STICK.
-    -   After Stick, dealer will start drawing card. He will keep drawing untill total of dealer's card is greater than player's total or its less than or equal to 17.
+    -   After Stick, dealer will start drawing card. He will keep drawing untill total of dealer's card is greater than player's total or it is less than 17.
     -   If dealer's card exceed 21, dealer loose. If not, if total is greater than player's point, dealer wins or else player wins.
     -   If both delaer'sw and player's point is same, it will be a PUSH
 

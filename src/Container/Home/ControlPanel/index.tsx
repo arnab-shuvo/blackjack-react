@@ -14,7 +14,7 @@ const ControlPanel: React.FC = () => {
 	return (
 		<ControlPanelContainer>
 			<Grid container justify={'center'}>
-				<Grid item md={3}>
+				<Grid item md={12}>
 					<Reset />
 				</Grid>
 			</Grid>

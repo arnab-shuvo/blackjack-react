@@ -7,4 +7,5 @@ export const ControlPanelContainer = styled.div`
 		font-size: 50px;
 		margin-top: 5px;
 	}
+	width: 100%;
 `;

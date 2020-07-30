@@ -27,10 +27,10 @@ const PlayersCard: React.FC = () => {
 			<p className='panel-score'>
 				Your Score : <span>{score}</span>
 			</p>
-			<Grid container justify={'center'} alignItems={'center'}>
+			<Grid container justify={window.innerWidth < 768 ? 'flex-start' : 'center'} alignItems={'center'}>
 				{playerCards.map((card: cards, index: number) => {
 					return (
-						<Grid key={index} item md={1}>
+						<Grid key={index} item md={1} xs={2}>
 							<Cards value={card.value} marker={card.marker} />
 						</Grid>
 					);
