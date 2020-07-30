@@ -23,8 +23,10 @@ const PlayersCard: React.FC = () => {
 
 	return (
 		<GameSideWrapper>
-			<p className='panel-header'>Your Cards</p>
-			<p className='panel-score'>Your Score : {score}</p>
+			{/* <p className='panel-header'>Your Cards</p> */}
+			<p className='panel-score'>
+				Your Score : <span>{score}</span>
+			</p>
 			<Grid container justify={'center'} alignItems={'center'}>
 				{playerCards.map((card: cards, index: number) => {
 					return (

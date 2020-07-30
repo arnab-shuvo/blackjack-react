@@ -9,7 +9,11 @@ export const GameSideWrapper = styled.div`
 	}
 	.panel-score {
 		margin-bottom: 30px;
-		font-size: 50px;
+		font-size: 30px;
 		text-align: center;
+		span {
+			font-size: 50px;
+			color: #e2ff00;
+		}
 	}
 `;

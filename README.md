@@ -1,44 +1,58 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# BlackJackCrack
 
-## Available Scripts
+[[Powered by ReactJs]](https://reactjs.org/)
 
-In the project directory, you can run:
+BlackJackCrack is a online version of BlackJack Card Game. Current application is following the rules described bellow:
 
-### `yarn start`
+> Numbered cards are worth their face value - 4 of clubs is worth 4, 10 of spades is worth 10, and so on
+> formatting syntax is to make it as readable
+> The ace can be either 1 or 11
+> Picture cards are worth 10 points.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Terms:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+> PUSH: Both the dealer's and player's points are same
+> BlackJack: Player got 21 in his first two cards
+> HIT: Player draw cards
+> STICK: Dealer drar cards
 
-### `yarn test`
+# Regulations:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   At the begining of the game, both player and dealer will be given two cards each, Player can see his two cards and one of dealer's cards.
 
-### `yarn build`
+    -   If the player is dealt an Ace and a ten-value card , It is called "BLACKJACK" In that case, player will hit Stick button and it will reveal the hidden card of dealer.
+    -   if dealer also scores 21, Then the game is draw and it is called "PUSH"
+    -   If dealer score is bellow 21, The player wins
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   If not "BLACKJACK", player will HIT until player is happy with his cards.
+    -   If the player's total card's value exceeds 21, Player loose.
+    -   If total value is less then 21 and player is happy, the there will be STICK.
+    -   After Stick, dealer will start drawing card. He will keep drawing untill total of dealer's card is greater than player's total.
+    -   If dealer's card exceed 21, dealer loose. If not, if total is greater than player's point, dealer wins or else player wins.
+    -   If both delaer'sw and player's point is same, it will be a PUSH
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+### Tech
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+BlackJack uses a number of open source projects to work properly:
 
-### `yarn eject`
+-   ReactJs - SPA!
+-   Tyescript - Type casting
+-   Redux - State Management Package
+-   Material UI - Layout of the Components
+-   Styled Components - design the componentss
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Installation
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Install the dependencies and devDependencies and start the server.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```sh
+$ yarn
+$ yarn start
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Or for npm,
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```sh
+$ npm i
+$ npm start
+```

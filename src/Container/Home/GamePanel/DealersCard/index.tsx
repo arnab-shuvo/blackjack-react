@@ -33,8 +33,10 @@ const DealersCard: React.FC = () => {
 
 	return (
 		<GameSideWrapper>
-			<p className='panel-header'>Dealer's Cards</p>
-			<p className='panel-score'>Dealer's Score : {score}</p>
+			{/* <p className='panel-header'>Dealer's Cards</p> */}
+			<p className='panel-score'>
+				Dealer's Score : <span>{score}</span>
+			</p>
 			<Grid container justify={'center'} alignItems={'center'}>
 				{dealerStore.cards.map((card: cards, index: number) => {
 					return (
