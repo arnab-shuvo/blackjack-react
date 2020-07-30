@@ -14,6 +14,7 @@ const Hit: React.FC<IControl> = ({ disabled }) => {
 	const playerScore = useSelector((state: IStoreState) => state.utilityStore.playerScore);
 	const blackJack = useSelector((state: IStoreState) => state.utilityStore.blackJack);
 	const dealerCards = useSelector((state: IStoreState) => state.dealerStore.cards);
+	const playerCards = useSelector((state: IStoreState) => state.playerStore.cards);
 	const dispatch = useDispatch();
 
 	const blackJackCallBack = () => {
@@ -43,7 +44,9 @@ const Hit: React.FC<IControl> = ({ disabled }) => {
 	};
 
 	const stick = () => {
-		if (blackJack) {
+		console.log(playerCards.length, 'playerCards.length');
+
+		if (blackJack && playerCards.length < 3) {
 			blackJackCallBack();
 		} else {
 			regStick();

@@ -15,7 +15,7 @@ const PlayersCard: React.FC = () => {
 	useEffect(() => {
 		const newScore = ScoreCalculator(playerCards);
 		dispatch(storePlayerScore(newScore));
-		if (playerCards.length === 2 && newScore === BREAKPOINT) {
+		if (newScore === BREAKPOINT) {
 			dispatch(blackJack());
 		}
 		setScore(newScore);
